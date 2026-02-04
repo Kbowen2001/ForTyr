@@ -3,13 +3,6 @@
   font-family: Gotham Rounded;
 }
 
-:root {
-  /* EDIT THESE FOR PAGE BACKGROUND */
-  --bg-neutral: #1a4d66;
-  --bg-wrong: #6b0f0f;
-  --bg-correct: #0f6b3a;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -18,15 +11,24 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-neutral);
+  background-color: #1a4d66;
 }
 
 body.correct {
-  background-color: var(--bg-correct);
+  background-color: #86e4b2;
+  background-image: url('img/correct.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 body.wrong {
-  background-color: var(--bg-wrong);
+  background-color: #3c5e91;
+  background-image: url('img/wrong.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
  
 }
 
@@ -64,12 +66,12 @@ body.wrong {
 .btn.correct {
   color: black;
   /* EDIT THIS FOR RIGHT ANSWER BUTTON BACKGROUND */
-  background-color: #2ecc71;
+  background-color: #6ef379;
 }
 
 .btn.wrong {
   /* EDIT THIS FOR WRONG ANSWER BUTTON BACKGROUND */
-  background-color: #e74c3c;
+  background-color: #bb5778;
 }
 
 .start-btn, .next-btn {
