@@ -51,8 +51,8 @@ body.wrong {
 }
 
 .btn {
-  border: 1px solid #1f4f7a;
-  background-color: #2d74b2;
+  border: 1px solid #d19ff3;
+  background-color: #d19ff3;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
@@ -71,7 +71,7 @@ body.wrong {
 
 .btn.wrong {
   /* EDIT THIS FOR WRONG ANSWER BUTTON BACKGROUND */
-  background-color: #bb5778;
+  background-color: #e65e8b;
 }
 
 .start-btn, .next-btn {

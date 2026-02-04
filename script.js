@@ -73,7 +73,7 @@ function selectAnswer(e) {
   } else {
     questionElement.classList.add('hide')
     answerButtonsElement.classList.add('hide')
-    resultElement.innerText = `Wrong answers: ${wrongCount} / ${shuffledQuestions.length}`
+    resultElement.innerText = `Score: ${shuffledQuestions.length - wrongCount} / ${shuffledQuestions.length}`
     resultElement.classList.remove('hide')
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
