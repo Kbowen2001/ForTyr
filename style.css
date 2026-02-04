@@ -10,6 +10,7 @@ body {
   width: 100vw;
   height: 100vh;
   justify-content: center;
+  color: #2b1b2f;
   align-items: flex-start;
   padding-top: 60px;
   background-image: url('img/hearts.webp');
@@ -39,7 +40,11 @@ body.wrong {
   background-color: rgb(231, 204, 248);
   border-radius: 5px;
   padding: 10px;
-  box-shadow: 0 0 10px 2px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.35);
+  color:white;
+  font-weight: bold;
+  text-align: center;
+  font-size:30px;
 }
 
 /*buttons*/
@@ -58,8 +63,6 @@ body.wrong {
   padding: 5px 10px;
   color: white;
   outline: none;
-  font-weight: bold;
-  font-size: 20px;
 }
 
 .btn:hover {
@@ -70,19 +73,15 @@ body.wrong {
   color: rgb(102, 99, 99);
   /* EDIT THIS FOR RIGHT ANSWER BUTTON BACKGROUND */
   background-color: #6ef379;
-  font-weight: bold;
-  font-size: 20px;
 }
 
 .btn.wrong {
   /* EDIT THIS FOR WRONG ANSWER BUTTON BACKGROUND */
   background-color: #e65e8b;
-  font-weight: bold;
-  font-size: 20px;
 }
 
 .start-btn, .next-btn {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
 }
@@ -101,5 +100,5 @@ body.wrong {
   text-align: center;
   color:white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
