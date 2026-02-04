@@ -8,12 +8,16 @@ body {
   margin: 0;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100dvh;
   justify-content: center;
   color: #2b1b2f;
   align-items: flex-start;
   padding-top: 60px;
   background-image: url('img/hearts.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 body.correct {
@@ -105,4 +109,11 @@ body.wrong {
   color:white;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 30px;
+    background-position: center top;
+  }
 }
