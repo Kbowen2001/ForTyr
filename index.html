@@ -1,48 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>For Tyr</title>  
-  </head>
-  <body>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+</head>
+<body >
+    
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-grid">
+              <button class="btn">Answer 1</button>
+              <button class="btn">Answer 2</button>
+              <button class="btn">Answer 3</button>
+              <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div class="control">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
 
-    <header>
-      <h1>Tyr</h1>
-    </header>
-    <section class="banner">
-    <img src="img/peachj.png" alt="For Tyr welcome banner">
-   
-    </section>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/join.html" class="join">Give me attention</a></li>
-        <li><a href="/news.html">Latest News</li>
-        <li><a href="/games.html">New Games</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <main>
-      <article>
-        <h2> It's a me, Peach! </h2>
-        <p>blah blah tyr </p>
-      </article>
-      <ul class="images">
-        <li><img src="img/peach and daisy.jpg" alt="mario thumb 1"></li>
-        <li><img src="img/all the friends.avif" alt="mario thumb 2"></li>
-      </ul>
-    </main>
-    <section class="join"> 
-      <h2>Join Today! </h2>
-      <p>Sign up if you think I am the better driver! </p>
-      <form>
-        <input type="email" name="email" placeholder="Type Email & hit enter" required>
-      </form>
-    </section>
-    <footer>
-      <p class="copyright">Copyright 2019 Marioclub</p>
-    </footer>
-  </body>
+    </div>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
 </html>
