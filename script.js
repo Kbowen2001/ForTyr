@@ -9,6 +9,10 @@ let shuffledQuestions, currentQuestionIndex, wrongCount
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
+  if (nextButton.dataset.action === 'show-score') {
+    showScore()
+    return
+  }
   currentQuestionIndex++
   setNextQuestion()
 })
@@ -22,6 +26,8 @@ function startGame() {
   questionElement.classList.remove('hide')
   resultElement.classList.add('hide')
   answerButtonsElement.classList.remove('hide')
+  nextButton.dataset.action = ''
+  nextButton.innerText = 'Next'
   setNextQuestion()
 }
 
@@ -47,6 +53,8 @@ function showQuestion(question) {
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
+  nextButton.dataset.action = ''
+  nextButton.innerText = 'Next'
   questionContainerElement.dataset.answered = 'false'
   questionElement.classList.remove('hide')
   resultElement.classList.add('hide')
@@ -71,13 +79,28 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    questionElement.classList.add('hide')
-    answerButtonsElement.classList.add('hide')
-    resultElement.innerText = `Score: ${shuffledQuestions.length - wrongCount} / ${shuffledQuestions.length}`
-    resultElement.classList.remove('hide')
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    nextButton.dataset.action = 'show-score'
+    nextButton.innerText = 'Show Score'
+    nextButton.classList.remove('hide')
   }
+}
+
+function showScore() {
+  clearStatusClass(document.body)
+  questionElement.classList.add('hide')
+  answerButtonsElement.classList.add('hide')
+  resultElement.innerText = `Score: ${shuffledQuestions.length - wrongCount} / ${shuffledQuestions.length}`
+  resultElement.classList.remove('hide')
+  if (wrongCount > 1) {
+    setTimeout(() => {
+      alert('ravage me')
+    }, 0)
+  }
+  startButton.innerText = 'Restart'
+  startButton.classList.remove('hide')
+  nextButton.classList.add('hide')
+  nextButton.dataset.action = ''
+  nextButton.innerText = 'Next'
 }
 
 function setStatusClass(element, correct) {
