@@ -4,13 +4,13 @@
 }
 
 :root {
-  --hue-neutral: 200;
-  --hue-wrong: 0;
-  --hue-correct: 145;
+  /* EDIT THESE FOR PAGE BACKGROUND */
+  --bg-neutral: #1a4d66;
+  --bg-wrong: #6b0f0f;
+  --bg-correct: #0f6b3a;
 }
 
 body {
-  --hue: var(--hue-neutral);
   padding: 0;
   margin: 0;
   display: flex;
@@ -18,15 +18,15 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: hsl(var(--hue), 100%, 20%);
+  background-color: var(--bg-neutral);
 }
 
 body.correct {
-  --hue: var(--hue-correct);
+  background-color: var(--bg-correct);
 }
 
 body.wrong {
-  --hue: var(--hue-wrong);
+  background-color: var(--bg-wrong);
  
 }
 
@@ -49,9 +49,8 @@ body.wrong {
 }
 
 .btn {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 100%, 50%);
+  border: 1px solid #1f4f7a;
+  background-color: #2d74b2;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
@@ -63,12 +62,14 @@ body.wrong {
 }
 
 .btn.correct {
-  --hue: var(--hue-correct);
   color: black;
+  /* EDIT THIS FOR RIGHT ANSWER BUTTON BACKGROUND */
+  background-color: #2ecc71;
 }
 
 .btn.wrong {
-  --hue: var(--hue-wrong);
+  /* EDIT THIS FOR WRONG ANSWER BUTTON BACKGROUND */
+  background-color: #e74c3c;
 }
 
 .start-btn, .next-btn {
