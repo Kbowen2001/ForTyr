@@ -125,5 +125,29 @@ const questions = [
       { text: 'NO!', correct: false },
       { text: 'Yes of course', correct: true }
     ]
+  },
+
+    {
+    question: 'Do you love Nala?',
+    answers: [
+      { text: 'Nah', correct: false },
+      { text: 'With all my heart', correct: true }
+    ]
+  },
+
+    {
+    question: 'Are you gonna kiss me?',
+    answers: [
+      { text: 'I would rather not', correct: false },
+      { text: 'Always', correct: true }
+    ]
+  },
+
+    {
+    question: 'Will you send me money?',
+    answers: [
+      { text: 'NO!', correct: true },
+      { text: 'Whatever you want baby', correct: false }
+    ]
   }
 ]
