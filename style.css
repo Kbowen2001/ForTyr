@@ -27,6 +27,7 @@ body.correct {
 
 body.wrong {
   --hue: var(--hue-wrong);
+ 
 }
 
 .container {
@@ -85,3 +86,9 @@ body.wrong {
 .hide {
   display: none;
 } 
+
+#result {
+  text-align: center;
+  color:red;
+  font-size: 1.5rem;
+}

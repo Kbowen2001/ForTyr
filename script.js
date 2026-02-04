@@ -19,6 +19,7 @@ function startGame() {
   currentQuestionIndex = 0
   wrongCount = 0
   questionContainerElement.classList.remove('hide')
+  questionElement.classList.remove('hide')
   resultElement.classList.add('hide')
   answerButtonsElement.classList.remove('hide')
   setNextQuestion()
@@ -47,6 +48,7 @@ function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
   questionContainerElement.dataset.answered = 'false'
+  questionElement.classList.remove('hide')
   resultElement.classList.add('hide')
   answerButtonsElement.classList.remove('hide')
   while (answerButtonsElement.firstChild) {
@@ -69,6 +71,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
+    questionElement.classList.add('hide')
     answerButtonsElement.classList.add('hide')
     resultElement.innerText = `Wrong answers: ${wrongCount} / ${shuffledQuestions.length}`
     resultElement.classList.remove('hide')
