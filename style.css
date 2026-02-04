@@ -58,25 +58,31 @@ body.wrong {
   padding: 5px 10px;
   color: white;
   outline: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .btn:hover {
-  border-color: black;
+  border-color: rgb(156, 5, 243);
 }
 
 .btn.correct {
-  color: black;
+  color: rgb(102, 99, 99);
   /* EDIT THIS FOR RIGHT ANSWER BUTTON BACKGROUND */
   background-color: #6ef379;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .btn.wrong {
   /* EDIT THIS FOR WRONG ANSWER BUTTON BACKGROUND */
   background-color: #e65e8b;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .start-btn, .next-btn {
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
   padding: 10px 20px;
 }
