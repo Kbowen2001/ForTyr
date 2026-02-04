@@ -3,8 +3,9 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const resultElement = document.getElementById('result')
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex, wrongCount
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -16,7 +17,10 @@ function startGame() {
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
+  wrongCount = 0
   questionContainerElement.classList.remove('hide')
+  resultElement.classList.add('hide')
+  answerButtonsElement.classList.remove('hide')
   setNextQuestion()
 }
 
@@ -42,21 +46,32 @@ function showQuestion(question) {
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
+  questionContainerElement.dataset.answered = 'false'
+  resultElement.classList.add('hide')
+  answerButtonsElement.classList.remove('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
 }
 
 function selectAnswer(e) {
+  if (questionContainerElement.dataset.answered === 'true') return
+  questionContainerElement.dataset.answered = 'true'
   const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
+  const correct = selectedButton.dataset.correct === 'true'
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
+  if (!correct) {
+    wrongCount++
+  }
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
+    answerButtonsElement.classList.add('hide')
+    resultElement.innerText = `Wrong answers: ${wrongCount} / ${shuffledQuestions.length}`
+    resultElement.classList.remove('hide')
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
   }
@@ -84,6 +99,7 @@ const questions = [
       { text: 'No', correct: false }
     ]
   },
+  
   {
     question: 'Do I like you?',
     answers: [
@@ -91,19 +107,20 @@ const questions = [
       { text: 'No', correct: false },
     ]
   },
+
   {
-    question: 'Should you do something about that?',
+    question: 'Should I buy you more snacks?',
     answers: [
       { text: 'YES!!!', correct: true },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
     ]
   },
+
   {
-    question: '?',
+    question: 'Are you going to cuddle me?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'NO!', correct: false },
+      { text: 'Yes of course', correct: true }
     ]
   }
 ]
