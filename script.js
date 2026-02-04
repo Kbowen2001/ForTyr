@@ -78,32 +78,29 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Do you like me?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Yes', correct: true },
+      { text: 'No', correct: false }
     ]
   },
   {
-    question: 'What is your favorite Color?',
+    question: 'Do I like you?',
     answers: [
-      { text: 'Yellow', correct: true },
-      { text: 'Red', correct: true },
-      { text: 'Blue', correct: true },
-      { text: 'Green', correct: true }
+      { text: 'Yes', correct: true },
+      { text: 'No', correct: false },
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'Should you do something about that?',
     answers: [
-      { text: 'Kinda', correct: false },
       { text: 'YES!!!', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: '?',
     answers: [
       { text: '6', correct: false },
       { text: '8', correct: true }
