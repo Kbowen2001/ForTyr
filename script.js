@@ -93,7 +93,7 @@ function showScore() {
   resultElement.classList.remove('hide')
   if (wrongCount > 1) {
     setTimeout(() => {
-      alert('ravage me')
+      alert('Do dirty things to me baby 😘')
     }, 0)
   }
   startButton.innerText = 'Restart'
