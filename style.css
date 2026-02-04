@@ -25,7 +25,7 @@ body.correct {
 
 body.wrong {
   background-color: #3c5e91;
-  background-image: url('img/wrong.webp');
+  background-image: url('img/wrong.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
