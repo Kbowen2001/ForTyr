@@ -10,12 +10,13 @@ body {
   width: 100vw;
   height: 100vh;
   justify-content: center;
-  align-items: center;
-  background-color: #1a4d66;
+  align-items: flex-start;
+  padding-top: 60px;
+  background-image: url('img/hearts.webp');
 }
 
 body.correct {
-  background-color: #86e4b2;
+  background-color: #e4de86;
   background-image: url('img/correct.jpg');
   background-size: cover;
   background-position: center;
@@ -35,7 +36,7 @@ body.wrong {
 .container {
   width: 800px;
   max-width: 80%;
-  background-color: white;
+  background-color: rgb(231, 204, 248);
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;
@@ -92,6 +93,7 @@ body.wrong {
 
 #result {
   text-align: center;
-  color:rgb(236, 217, 152);
-  font-size: 1.5rem;
+  color:white;
+  font-weight: bold;
+  font-size: 30px;
 }
