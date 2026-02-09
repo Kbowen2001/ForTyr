@@ -91,7 +91,7 @@ function showScore() {
   answerButtonsElement.classList.add('hide')
   resultElement.innerText = `Score: ${shuffledQuestions.length - wrongCount} / ${shuffledQuestions.length}`
   resultElement.classList.remove('hide')
-  if (wrongCount > 1) {
+  if (wrongCount > 0) {
     setTimeout(() => {
       alert('Do dirty things to me baby 😘')
     }, 0)
